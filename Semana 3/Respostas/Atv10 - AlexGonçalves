@@ -1,0 +1,76 @@
+/*
+    Escreva um código que exiba na tela um menu com as opções:
+
+    1. Somar 2 numeros
+    2. Multiplicar 2 numeros
+    3. Encerrar
+
+    O programa só poderá ser finalizado quando o usuário escolher a opção 3
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main () {
+    setlocale(LC_ALL, "Portuguese");
+    system("clear");
+
+    int numero1, numero2, resultado, opcao;
+
+    do {
+
+        printf("Escolha uma opção abaixo\n");
+        printf("1. Somar 2 numeros\n2. Multiplicar 2 numeros\n3. Encerrar\n");
+        scanf("%d", &opcao);
+        getchar();
+
+        switch (opcao) {
+            case 1:
+                system("clear");
+                printf("Digite 2 números para efetuar a soma!!\n");
+                printf("Primeiro número: ");
+                scanf("%d", &numero1);
+                getchar();
+
+                printf("Segundo número: ");
+                scanf("%d", &numero2);
+                getchar();
+
+                resultado = numero1 + numero2;
+
+                printf("%d + %d = %d\n\n", numero1, numero2, resultado);
+                break;
+
+            case 2:
+                system("clear");
+                printf("Digite 2 números para efetuar a multiplicação!!\n");
+                printf("Primeiro número: ");
+                scanf("%d", &numero1);
+                getchar();
+
+                printf("Segundo número: ");
+                scanf("%d", &numero2);
+                getchar();
+
+                resultado = numero1 * numero2;
+
+                printf("%d x %d = %d\n\n", numero1, numero2, resultado);
+                break;
+
+            case 3:
+                system("clear");
+                printf("Encerrado");
+                return 0;
+                break;
+
+            default:
+                system("clear");
+                printf("Opção inválida!!\n\n");
+                break;
+        }
+
+        
+    } while(1);
+
+}
