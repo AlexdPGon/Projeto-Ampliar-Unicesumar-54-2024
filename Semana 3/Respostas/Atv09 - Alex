@@ -1,0 +1,32 @@
+/*
+    Crie um programa que leia dois números inteiros A e B e calcule A elevado à potência de B.
+    Exemplo: Leu 5 e 3, vai calcular 5³.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main () {
+    setlocale(LC_ALL, "Portuguese");
+    system("clear");
+
+    int numero1, numero2, resultado = 1;
+
+    printf("Digite 2 números para potencializa-los abaixo!!\n");
+    printf("Primeiro número: ");
+    scanf("%d", &numero1);
+    getchar();
+
+    printf("Segundo número: ");
+    scanf("%d", &numero2);
+    getchar();
+
+    for (int i = 0; i < numero2; i++ ) {
+        resultado = resultado * numero1;
+    }
+
+    printf("O número %d elevado ao número %d é %d", numero1, numero2, resultado);
+
+    return 0;
+}
